@@ -1,0 +1,1 @@
+Esse jogo da velha é jogado com o usuário versus a máquina. Tenta vence-la!! Se encontra alguma forma de ganhar, comente.
