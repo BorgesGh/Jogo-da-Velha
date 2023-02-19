@@ -83,7 +83,7 @@ public class Jogo {
 	}
 	
 	// LEITURA DE DADOS ------------------------------------
-private int lerDadosLinha() {
+	private int lerDadosLinha() {
 		int linha;
 		System.out.println("\nDigite a LINHA <1 a 3>");
 		linha = scan.nextInt();
@@ -91,7 +91,7 @@ private int lerDadosLinha() {
 
 	}
 
-private int lerDadosColuna() {
+	private int lerDadosColuna() {
 		int coluna;
 		System.out.println("\nDigite a COLUNA <1 a 3>");
 		coluna = scan.nextInt();
@@ -99,7 +99,7 @@ private int lerDadosColuna() {
 	}
 
 	// VERIFICAÇÕES DOS VALORES ---------------------------------------------
-private boolean getCords(int linha, int coluna) {
+	private boolean getCords(int linha, int coluna) {
 
 		if (verificarDigito(linha, coluna) || verificarEspaco(linha, coluna)) {
 			return true;
@@ -107,7 +107,7 @@ private boolean getCords(int linha, int coluna) {
 		return false;
 	}
 
-private boolean verificarEspaco(int linha, int coluna) {
+	private boolean verificarEspaco(int linha, int coluna) {
 
 		if (this.matriz[linha][coluna] != ' ') {
 			System.out.println("\nLocal inválido!\n");
@@ -116,7 +116,7 @@ private boolean verificarEspaco(int linha, int coluna) {
 		return false;
 	}
 
-private boolean verificarDigito(int linha, int coluna) {
+	private boolean verificarDigito(int linha, int coluna) {
 
 		if (linha > 2 || coluna > 2 || linha < 0 || coluna < 0) {
 			System.out.println("Valor inválido!");
@@ -127,13 +127,13 @@ private boolean verificarDigito(int linha, int coluna) {
 
 	// VERIFICÃO DO TABULEIRO
 
-private boolean ganhou() {
+	private boolean ganhou() {
 		if (verificarLinhas() || verificarColunas() || verificarDiagonais())
 			return true;
 		return false;
 	}
 
-private boolean verificarLinhas() {
+	private boolean verificarLinhas() {
 		int contX = 0;
 		int contO = 0;
 
@@ -161,7 +161,7 @@ private boolean verificarLinhas() {
 
 	}
 
-private boolean verificarColunas() {
+	private boolean verificarColunas() {
 		int contX = 0;
 		int contO = 0;
 
@@ -187,7 +187,7 @@ private boolean verificarColunas() {
 		return false;
 	}
 
-private boolean verificarDiagonais() {
+	private boolean verificarDiagonais() {
 		if (this.matriz[0][0] == 'X' && this.matriz[1][1] == 'X' && this.matriz[2][2] == 'X') {
 			this.sinal = 'X';
 			return true;
@@ -207,7 +207,7 @@ private boolean verificarDiagonais() {
 
 	// RESPOSTA DA MÁQUINA ------------------------
 
-private void bootPlay(int jogadas) {
+	private void bootPlay(int jogadas) {
 		boolean marcador = false;
 		if (jogadas == 0)
 			primeiraJogada();
@@ -218,7 +218,7 @@ private void bootPlay(int jogadas) {
 		}
 	}
 
-private void primeiraJogada() {
+	private void primeiraJogada() {
 		if (this.matriz[1][1] == ' ')
 			this.matriz[1][1] = 'O';
 		else
@@ -226,7 +226,7 @@ private void primeiraJogada() {
 
 	}
 
-private boolean nivel1() {
+	private boolean nivel1() {
 	 
 	 int temXLinha = -1;
 	 int temXColuna = -1;
